@@ -42,7 +42,7 @@
             transform: translateX(-50%);
             background: transparent;
             z-index: 1000;
-            height: 56px;
+            height: 68px;
             display: flex;
             align-items: center;
         }
@@ -112,14 +112,22 @@
         }
 
         html { font-size: 125%; }
-        /* Prevent fixed nav from overlapping anchor targets on mobile */
         html { scroll-padding-top: 72px; }
 
-        /* Ensure sections are offset from the fixed nav when jumped-to */
+        
         section { scroll-margin-top: 72px; }
 
-        /* Add top spacing so header content isn't hidden under the nav */
-        header { padding-top: 36px; }
+        header { padding-top: 120px; }
+
+        header h1 { margin: 0 0 6px 0; font-weight: 600; }
+        header p { margin: 0 0 16px 0; }
+
+        @media (max-width: 600px) {
+            nav { height: 80px; }
+            html { scroll-padding-top: 92px; }
+            section { scroll-margin-top: 92px; }
+            header { padding-top: 80px; }
+        }
     </style>
 </head>
 
